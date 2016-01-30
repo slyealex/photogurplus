@@ -4,16 +4,16 @@ class PicturesController < ApplicationController
   end
 
   def new
-    @picture = Picture(picture_params)
-    if @picture.save
-      redirect_to picture_path
-    else
-      render :new
-    end
+    @picture = Picture.new
   end
 
   def create
-
+    @picture = Picture.create(picture_params)
+    if @picture.save
+      redirect_to pictures_path
+    else
+      render :new
+    end
   end
 
   def edit
