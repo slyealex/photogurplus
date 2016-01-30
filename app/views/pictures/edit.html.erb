@@ -1,1 +1,19 @@
 <h1>Edit a Photo</h1>
+
+<%= form_for @picture do |f| %>
+  <div class="form-group">
+    <%= f.label :artist %>
+    <%= f.text_field :artist, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url %>
+    <%= f.text_field :url, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
